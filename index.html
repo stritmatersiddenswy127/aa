@@ -2,104 +2,74 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>애드워즈 광고</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>강남 예약</title>
 
   <style>
-    body {
+    * {
       margin: 0;
-      padding: 30px;
-      background: #efefef;
-      font-family: sans-serif;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* 상단 버튼 */
-    .button-wrap {
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
+      align-items: flex-start;
     }
 
-    .link-btn img {
-      width: 320px;
-      max-width: 100%;
-      transition: 0.2s;
-      cursor: pointer;
+    /* 모바일 화면 기준 최대 너비 제한 */
+    .container {
+      width: 100%;
+      max-width: 480px;   /* 일반 스마트폰 화면에 최적화 */
+      margin: 0 auto;
     }
 
-    .link-btn img:hover {
-      transform: scale(1.03);
+    /* 이미지 전체 클릭 시 전화 연결 */
+    .call-link {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    /* 메인 광고 이미지 */
-    .main-image {
-      margin-bottom: 50px;
+    .call-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 0;
     }
 
-    .main-image img {
-      width: 700px;
-      max-width: 100%;
-      border-radius: 10px;
+    /* 터치 시 살짝 어두워지는 효과 */
+    .call-link:active {
+      opacity: 0.95;
     }
 
-    /* 하단 버튼 */
-    .bottom-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
+    /* 태블릿 이상에서는 가운데 정렬 */
+    @media (min-width: 768px) {
+      body {
+        padding: 20px 0;
+      }
+
+      .container {
+        max-width: 480px;
+      }
     }
   </style>
 </head>
-
 <body>
-
-  <!-- 상단 버튼 -->
-  <div class="button-wrap">
-
-    <!-- 텔레그램 -->
-    <a class="link-btn"
-       href="https://t.me/advertisement100"
-       target="_blank">
-      <img src="텔레2.png" alt="텔레그램">
+  <div class="container">
+    <a href="tel:01080372853" class="call-link">
+      <img src="강남.png" alt="강남 가라오케 예약 전화 연결 010-8037-2853" />
     </a>
-
-    <!-- 카카오톡 -->
-    <a class="link-btn"
-       href="https://open.kakao.com/o/saRVkLPh"
-       target="_blank">
-      <img src="카톡2.png" alt="카카오톡">
-    </a>
-
   </div>
-
-  <!-- 메인 이미지 -->
-  <div class="main-image">
-    <img src="애드워즈2.png" alt="광고 이미지">
-  </div>
-
-  <!-- 하단 버튼 -->
-  <div class="bottom-buttons">
-
-    <!-- 텔레그램 -->
-    <a class="link-btn"
-       href="https://t.me/advertisement100"
-       target="_blank">
-      <img src="텔레2.png" alt="텔레그램">
-    </a>
-
-    <!-- 카카오톡 -->
-    <a class="link-btn"
-       href="https://open.kakao.com/o/saRVkLPh"
-       target="_blank">
-      <img src="카톡2.png" alt="카카오톡">
-    </a>
-
-  </div>
-
 </body>
 </html>
